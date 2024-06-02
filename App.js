@@ -1,13 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { PixelRatio, SafeAreaView, StyleSheet, Text, View , Image, TextInput, ScrollView} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function App() {
   return (
-    
-    <SafeAreaView style={styles.container}>
+   <View style={styles.container}>
+    <SafeAreaView  style={styles.mainView}>
       <View style={styles.flx}>
           <View flx2>
-            <Text style={styles.TSize} >
+            <Text style={styles.TSize}>
              Hello, Devs 
             </Text>  
 
@@ -15,70 +16,76 @@ export default function App() {
              14 tasks today
             </Text>
           </View>  
-            <Image source={require("./Profile_Image.png")}/>
+            <Image source={require("./Profile_Image.png")} style={styles.img1}/>
       </View>
-      
-      
-      <TextInput
-        style={styles.searchBox}
-        placeholder="Search"
-      />
+
+
+      <View style={styles.flex2}>
+       
+        <TextInput
+          style={styles.searchBox}
+          placeholder= "Search"
+        />
+        <Image source={require("./Filter.png")} style={styles.img2}/>
+      </View>
+
+
       <ScrollView>
        <View><Text style={styles.size2}> Categories</Text></View>
 
       <ScrollView horizontal={true} style={styles.horizontalScroll}  showsHorizontalScrollIndicator={false}>
         <View style={styles.scrollItem1}>
           <Text style={styles.ts1}>Exercise</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
             <Image source={require("./young woman working online.png")} style={styles.img}/>
           </View>
         </View>
         <View style={styles.scrollItem2}>
-          <Text style={styles.ts1}>Item 2</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts1}>Study</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
              <Image source={require("./young woman working at desk.png")} style={styles.img}/>
           </View>
         </View>
         <View style={styles.scrollItem3}>
-          <Text style={styles.ts1}>Item 3</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts1}>Code</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
             <Image source={require("./Profile_Image.png")} style={styles.img}/>
           </View>
         </View>
         <View style={styles.scrollItem4}>
-          <Text style={styles.ts1}>Item 1</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts1}>Cook</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
             <Image source={require("./Profile_Image.png")} style={styles.img}/>
           </View>
         </View>
         <View style={styles.scrollItem5}>
-          <Text style={styles.ts1}>Item 2</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts1}>Play</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
             <Image source={require("./Profile_Image.png")} style={styles.img}/>
           </View>
         </View>
         <View style={styles.scrollItem6}>
-          <Text style={styles.ts1}>Item 3</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts1}>Wash</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
             <Image source={require("./Profile_Image.png")} style={styles.img}/>
           </View>
         </View>
         <View style={styles.scrollItem7}>
-          <Text style={styles.ts1}>Item 1</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts1}>Cleaning</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
             <Image source={require("./Profile_Image.png")} style={styles.img}/>
           </View>
         </View>
         <View style={styles.scrollItem8}>
-          <Text style={styles.ts1}>Item 2</Text>
-          <Text style={styles.ts2}>12 tasks</Text>
+          <Text style={styles.ts1}>Sing</Text>
+          <Text style={styles.ts2}>12 Tasks</Text>
           <View style={styles.image}>
             <Image source={require("./Profile_Image.png")} style={styles.img}/>
           </View>
@@ -111,7 +118,7 @@ export default function App() {
 
     </SafeAreaView>
   
-
+    </View> 
 
     
   );
@@ -121,12 +128,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'rgba(232, 209, 186, 0.5)',
-  
-    
-    
-  },
+   },
+   mainView: {
+    marginLeft: 20,
+    marginRight: 10,
+   },
   OT :{
-    fontSize:30 ,
+    fontSize: 20,
+   fontWeight: 700,
+   fontFamily: 'Lato',
+   lineHeight: 24,
+   marginTop: 2,
+   marginBottom: 30 ,
   },
   TSize: {
     fontSize: 50,
@@ -139,7 +152,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     marginTop: 20,
     marginBottom: 60,
-    width: '60%',
+    width: '70%',
     backgroundColor: 'white',
   },
 
@@ -160,15 +173,15 @@ const styles = StyleSheet.create({
   scrollItem1: {
   backgroundColor:'white',
   marginRight: 10,
-  width: 300,
-  height: 320,
+  width: 250,
+  height: 300,
   borderRadius: 30,
   },
   scrollItem2: {
     backgroundColor:'white',
     marginRight: 10,
-    width: 300,
-    height: 320,
+    width: 270,
+    height: 300,
     borderRadius: 30,
     },
   scrollItem3: {
@@ -216,7 +229,9 @@ const styles = StyleSheet.create({
     ts1: {
      paddingLeft: 40,
      paddingTop: 30,
-     fontSize: 30,
+     
+     fontFamily: 'Lato',
+     fontSize: 20
     },
     ts2: {
       paddingLeft: 40,
@@ -224,7 +239,7 @@ const styles = StyleSheet.create({
     scrollItem: {
       backgroundColor: 'white',
       width: 'fit-to-screen',
-      height: 200,
+      height: 130,
       marginBottom: 20,
       borderWidth: 1,
       borderColor: '#E8D1BA',
@@ -232,13 +247,14 @@ const styles = StyleSheet.create({
     },
     txt: {
       textAlign: 'left',
-      paddingTop: 75,
-      paddingLeft: 50,
-      fontSize: 30,
+      paddingTop: 50,
+      paddingLeft: 20,
+      fontSize: 20,
+      fontFamily: 'Lato',
     },
     img :{
-      height: 200,
-      width: 200,
+      height: 150,
+      width: 150,
     },
     image: {
       paddingLeft: 70,
@@ -250,7 +266,16 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       marginRight: 100,
      },
-     flx2: {
-       
+     flex2: {
+      flexDirection:'row',
+
      },
+    img1: {
+      marginLeft: 80,
+      marginTop: 0,
+    },
+    img2: {
+      marginLeft: 55,
+      marginTop: 15,
+    },
 });
