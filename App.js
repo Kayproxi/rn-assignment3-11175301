@@ -22,40 +22,38 @@ export default function App() {
         placeholder="Search"
      />
       <ScrollView>
-      <View><Text style={styles.size2}> Categories</Text></View>
+       <View><Text style={styles.size2}> Categories</Text></View>
 
       <ScrollView horizontal={true} style={styles.horizontalScroll}>
-        <View style={styles.scrollItem1}><Text style={styles.ts1}>Exercise</Text><Text style={styles.ts2}>12 tasks</Text></View>
-        <View style={styles.scrollItem2}><Text style={styles.ts1}>Item 2</Text><Text style={styles.ts2}>12 tasks</Text></View>
-        <View style={styles.scrollItem3}><Text style={styles.ts1}>Item 3</Text><Text style={styles.ts2}>12 tasks</Text></View>
-        <View style={styles.scrollItem4}><Text style={styles.ts1}>Item 1</Text><Text style={styles.ts2}>12 tasks</Text></View>
-        <View style={styles.scrollItem5}><Text style={styles.ts1}>Item 2</Text><Text style={styles.ts2}>12 tasks</Text></View>
-        <View style={styles.scrollItem6}><Text style={styles.ts1}>Item 3</Text><Text style={styles.ts2}>12 tasks</Text></View>
-        <View style={styles.scrollItem7}><Text style={styles.ts1}>Item 1</Text><Text style={styles.ts2}>12 tasks</Text></View>
-        <View style={styles.scrollItem8}><Text style={styles.ts1}>Item 2</Text><Text style={styles.ts2}>12 tasks</Text></View>
+        <View style={styles.scrollItem1}><Text style={styles.ts1}>Exercise</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./young woman working at desk.png")} style={styles.image}/></View>
+        <View style={styles.scrollItem2}><Text style={styles.ts1}>Item 2</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./young woman working online.png")} style={styles.image}/></View>
+        <View style={styles.scrollItem3}><Text style={styles.ts1}>Item 3</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./Profile_Image.png")} style={styles.image}/></View>
+        <View style={styles.scrollItem4}><Text style={styles.ts1}>Item 1</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./Profile_Image.png")} style={styles.image}/></View>
+        <View style={styles.scrollItem5}><Text style={styles.ts1}>Item 2</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./Profile_Image.png")} style={styles.image}/></View>
+        <View style={styles.scrollItem6}><Text style={styles.ts1}>Item 3</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./Profile_Image.png")} style={styles.image}/></View>
+        <View style={styles.scrollItem7}><Text style={styles.ts1}>Item 1</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./Profile_Image.png")} style={styles.image}/></View>
+        <View style={styles.scrollItem8}><Text style={styles.ts1}>Item 2</Text><Text style={styles.ts2}>12 tasks</Text><Image source={require("./Profile_Image.png")} style={styles.image}/></View>
       </ScrollView>  
 
       <View ><Text style= {styles.OT}>Ongoing Task</Text></View>
       
         
       <ScrollView style={styles.verticalScroll}>
-        <View style={styles.scrollItem}><Text>Item 1</Text></View>
-        <View style={styles.scrollItem}><Text>Item 2</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-        <View style={styles.scrollItem}><Text>Item 3</Text></View>
-
-
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 1</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 2</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
+        <View style={styles.scrollItem}><Text style={styles.txt}>Item 3</Text></View>
 
 
       </ScrollView>
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
   },
   searchBox: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: '#FBF9F7',
     borderWidth: 1,
     borderRadius: 5,
     paddingLeft: 10,
@@ -106,7 +104,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   size2: {
-   fontSize: 30,
+   fontSize: 20,
+   fontWeight: 700,
+   fontFamily: 'Lato',
+   lineHeight: 24,
+   marginTop: 2,
+   marginBottom: 30 
   },
   scrollItem1: {
   backgroundColor:'white',
@@ -174,10 +177,14 @@ const styles = StyleSheet.create({
     },
     scrollItem: {
       backgroundColor: 'white',
-      width: 500,
+      width: 'fit-to-screen',
       height: 200,
       marginBottom: 20,
       borderColor: '#E8D1BA',
       borderRadius: 30,
+    },
+    txt: {
+      textAlign: 'center',
+      paddingTop: 90
     },
 });
